@@ -6,15 +6,16 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnSinginIn"
         android:layout_width="217dp"
         android:layout_height="48dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/buttton_sign_in"
         android:text="Sign in"
         android:textColor="@color/white"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
 
@@ -60,7 +61,7 @@
         app:srcCompat="@drawable/intersect" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/editTextSignEmail"
         android:layout_width="292dp"
         android:layout_height="51dp"
         android:layout_marginTop="52dp"
@@ -76,38 +77,36 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="289dp"
         android:layout_height="53dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="28dp"
         android:drawableRight="@drawable/group"
         android:ems="10"
         android:hint="Type password"
         android:inputType="textPassword"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintStart_toStartOf="@+id/editTextSignEmail"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSignEmail" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="24dp"
         android:text="FORGOT PASSWORD?"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="0.387"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toEndOf="@+id/btnSinginIn"
+        app:layout_constraintHorizontal_bias="0.587"
+        app:layout_constraintStart_toStartOf="@+id/btnSinginIn"
+        app:layout_constraintTop_toBottomOf="@+id/btnSinginIn" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="48dp"
         android:drawableLeft="@drawable/grommet_icons_google"
         android:drawablePadding="10dp"
         android:text="SIGN IN WITH GOOGLE"
         android:textColor="#5393f3"
         app:layout_constraintEnd_toEndOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintHorizontal_bias="0.463"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
