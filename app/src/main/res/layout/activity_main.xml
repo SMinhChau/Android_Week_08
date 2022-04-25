@@ -10,7 +10,7 @@
         android:id="@+id/btnSignIn"
         android:layout_width="217dp"
         android:layout_height="48dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/buttton_sign_in"
         android:text="Sign in"
         android:textColor="@color/white"
@@ -24,7 +24,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="217dp"
         android:layout_height="48dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="88dp"
         android:background="@drawable/button_register"
         android:text="Register"
         android:textColor="@color/white"
@@ -67,8 +67,8 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="463dp"
-        android:layout_height="259dp"
+        android:layout_width="579dp"
+        android:layout_height="284dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

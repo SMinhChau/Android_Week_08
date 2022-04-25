@@ -1,5 +1,6 @@
 package com.example.android_week_08;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,7 +35,7 @@ public class Register extends AppCompatActivity {
         txtpaswordAgain= findViewById(R.id.editTextTextPassWordAgain_S02);
         btnRegister= findViewById(R.id.btnRegister_S02);
 
-        mAuth = FirebaseAuth.getInstance();
+
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,22 +55,24 @@ public class Register extends AppCompatActivity {
     }
 
     private void createUserWithEmailAndPassword() {
-    String email= txtemail.getText().toString();
-    String password= txtpassword.getText().toString();
-    String passwordAS= txtpaswordAgain.getText().toString();
-    String name= txtname.getText().toString();
-        if(!passwordAS.equals(password)) {
+    String email= txtemail.getText().toString().trim();
+    String password= txtpassword.getText().toString().trim();
+    String passwordAS= txtpaswordAgain.getText().toString().trim();
+    String name= txtname.getText().toString().trim();
+        if(!passwordAS.equalsIgnoreCase(password)) {
             Toast.makeText(this, "Confirm password fail!!", Toast.LENGTH_SHORT).show();
         }else {
             mAuth.createUserWithEmailAndPassword(email, password)
-                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    .addOnCompleteListener( new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
-                                Log.d(TAG, "createUserWithEmail:success");
+                                //Log.d(TAG, "createUserWithEmail:success");
 //                            FirebaseUser user = mAuth.getCurrentUser();
 //                            updateUI(user);
+                                Intent intent = new Intent(Register.this,FaceScreen.class);
+                                startActivity(intent);
                             } else {
                                 // If sign in fails, display a message to the user.
                                 Log.w(TAG, "createUserWithEmail:failure", task.getException());
